@@ -12,7 +12,7 @@ var passwordArray = [ ];
 
 // These 4 functions starts with a confirm box asking for the Array of Letters which goes into the if statement and if it is true 
 // then it will add the array to the empty password array which then will be used for generating the password.
-// The else if clause will stop the programme from using that array for the password when cancel is selected
+// The else clause will stop the programme from using that array for the password when cancel is selected
 
 function LowerCase() {
   var lowerConfirm = confirm("Would You Like Lowercase Letters?") 
@@ -20,7 +20,7 @@ function LowerCase() {
 
   if(lowerConfirm == true){
     passwordArray = passwordArray.concat(lowercase) 
-  } else if (lowerConfirm == false) {
+  } else {
     passwordArray = passwordArray.concat(!lowercase);
   }
   return passwordArray;
@@ -32,7 +32,7 @@ function UpperCase() {
 
   if(upperConfirm == true){
     passwordArray = passwordArray.concat(uppercase);
-  } else if (lowerConfirm == false) {
+  } else {
     passwordArray = passwordArray.concat(!uppercase);
   }
   return passwordArray;
@@ -43,7 +43,7 @@ function Symbols() {
 
   if(symbolConfirm == true){
     passwordArray = passwordArray.concat(symbols);
-  } else if (lowerConfirm == false) {
+  } else {
     passwordArray = passwordArray.concat(!symbols);
   }
   return passwordArray;  
@@ -54,7 +54,7 @@ function Numbers() {
 
   if(numberConfirm == true){
     passwordArray = passwordArray.concat(number);
-  } else if (lowerConfirm == false) {
+  } else {
     passwordArray = passwordArray.concat(!number);
   }
   return passwordArray;
